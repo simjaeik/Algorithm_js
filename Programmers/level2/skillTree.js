@@ -1,20 +1,20 @@
-// const solution = (skill, skillTrees) => {
-//   let answer = skillTrees.length;
+const solution = (skill, skillTrees) => {
+  let answer = skillTrees.length;
 
-//   skillTrees.forEach((sk) => {
-//     const reg = new RegExp(`[^${skill}]`, "g");
+  skillTrees.forEach((sk) => {
+    const reg = new RegExp(`[^${skill}]`, "g");
 
-//     const token = sk.replace(reg, "");
+    const token = sk.replace(reg, "");
 
-//     for (let i = 0; i < token.length; i++) {
-//       if (token[i] !== skill[i]) {
-//         answer--;
-//         break;
-//       }
-//     }
-//   });
-//   return answer;
-// };
+    for (let i = 0; i < token.length; i++) {
+      if (token[i] !== skill[i]) {
+        answer--;
+        break;
+      }
+    }
+  });
+  return answer;
+};
 
 function solution(skill, skill_trees) {
   var regex = new RegExp(`[^${skill}]`, "g");
