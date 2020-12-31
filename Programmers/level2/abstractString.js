@@ -11,7 +11,7 @@ const mySplit = (i, s) => {
 
 const solution = (s) => {
   let max = s.length;
-  const range = [Array(s.length)];
+  const range = [...Array(s.length)];
 
   console.log(range);
   for (let i = 1; i <= s.length / 2; i++) {
