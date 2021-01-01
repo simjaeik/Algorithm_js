@@ -5,7 +5,6 @@ const solution = (number, k) => {
   st.push(num.shift());
 
   num.forEach((v) => {
-    console.log(v);
     while (k > 0 && st.length > 0 && st[st.length - 1] < v) {
       st.pop();
       k--;
