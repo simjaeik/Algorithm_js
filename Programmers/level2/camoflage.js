@@ -1,22 +1,31 @@
+// const solution = (clothes) => {
+//   let list = {};
+
+//   clothes.forEach(([val, type]) => {
+//     if (!list[type]) {
+//       list[type] = [val];
+//       return;
+//     }
+//     list[type].push(val);
+//   });
+
+//   let answer = 1;
+//   Object.values(list).forEach((v) => {
+//     answer *= v.length + 1;
+//   });
+
+//   return answer - 1;
+// };
+
 const solution = (clothes) => {
-  let list = {};
-
-  clothes.forEach(([val, type]) => {
-    if (!list[type]) {
-      list[type] = [val];
-      return;
-    }
-    list[type].push(val);
-  });
-
-  let answer = 1;
-  Object.values(list).forEach((v) => {
-    answer *= v.length + 1;
-  });
-
-  console.log(answer);
-
-  return list;
+  return (
+    Object.values(
+      clothes.reduce((res, val) => {
+        res[val[1]] = res[val] ? res[val] + 1 : 1;
+        return res;
+      }, {})
+    ).reduce((res, val) => res * (val + 1), 1) - 1
+  );
 };
 
 console.log(
