@@ -7,17 +7,15 @@ const recur = (numbers, target, sum, cur) => {
   }
 
   return (
-    recur(numbers, target, sum + numbers[cur], cur + 1) +
-    recur(numbers, target, sum - numbers[cur], cur + 1)
+    recur(numbers, target, sum + numbers[cur+1], cur + 1) +
+    recur(numbers, target, sum - numbers[cur+1], cur + 1)
   );
 };
 
 const solution = (numbers, target) => {
-  let answer = 0;
-
-  answer =
-    recur(numbers, target, numbers[0], 1) +
-    recur(numbers, target, -numbers[0], 1);
+  let answer =
+  recur(numbers, target, numbers[0], 0) +
+  recur(numbers, target, -numbers[0], 0);
 
   console.log(answer);
   return answer;
