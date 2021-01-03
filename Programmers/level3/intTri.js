@@ -32,7 +32,7 @@ function solution(triangle) {
         return (
           v +
           Math.max(
-            index < line.length ? cost[index] : 0,
+            index < cost.length ? cost[index] : 0,
             index > 0 ? cost[index - 1] : 0
           )
         );
