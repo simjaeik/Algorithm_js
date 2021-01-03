@@ -17,4 +17,4 @@ for (let i = 4; i <= inputNum; i++) {
 }
 console.log(list[inputNum]);
 
-console.log(solution(740));
+// console.log(solution(740));
