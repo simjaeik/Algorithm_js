@@ -83,3 +83,4 @@ const solution = (x, y, pos) => {
 };
 
 console.log(solution(0, 0, INIT_POSITION));
+

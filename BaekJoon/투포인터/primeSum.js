@@ -28,7 +28,6 @@ rl.on("line", (ln) => {
 
   primeList = primeList.filter((num) => num !== 0);
   primeList.shift();
-  console.log(primeList);
 
   let start = 0,
     end = 0,
