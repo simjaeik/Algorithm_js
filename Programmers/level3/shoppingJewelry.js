@@ -11,12 +11,7 @@ const solution = (gems) => {
 
   const len = gems.length;
   while (start < len && end < len) {
-    // const remain =
-    //   cmp.filter((v) => !list.includes(v)).length > 0 ? true : false;
     const contain = Object.keys(has).length === size;
-    console.log(start, end, contain);
-    // console.log(contain);
-    // console.log(has);
     if (!contain) {
       end++;
       if (has[gems[end]]) {
@@ -29,10 +24,8 @@ const solution = (gems) => {
         answer = [start + 1, end + 1];
       }
       if (has[gems[start]] === 1) {
-        console.log("hear");
         delete has[gems[start]];
       } else {
-        console.log("or hear");
         has[gems[start]]--;
       }
       start++;

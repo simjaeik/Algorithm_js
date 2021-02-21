@@ -10,7 +10,7 @@ const solution = (board, moves) => {
 
   moves.forEach((target) => {
     for (let i = 0, len = board.length; i < len; i++) {
-      if (board[i][target - 1] === 0) {
+      if (board[i][target - 1] === 0) {   
         continue;
       }
       const cur = board[i][target - 1];
