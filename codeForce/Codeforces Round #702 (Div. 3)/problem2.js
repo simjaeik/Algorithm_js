@@ -21,6 +21,7 @@ rl.on("line", (ln) => {
         list[div]++;
       });
 
+      let count = 0;
     list
       .map((n) => N / 3 - n)
       .forEach((v, idx) => {
@@ -29,7 +30,13 @@ rl.on("line", (ln) => {
           if (v * list[i] < 0) {
             v = Math.abs(v);
             if (v > cmp) {
+                list[idx] += list[i];
+                list[i] = 0;
+            }else{
+                list[i] += list[idx];
+                list[idx] = 0;
             }
+            count += (i-idx
           }
         }
       });
