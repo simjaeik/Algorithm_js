@@ -21,7 +21,7 @@ rl.on("line", (ln) => {
 
   while (left < right) {
     const sum = list[left] + list[right];
-    console.log(left, right, sum, min);
+
     if (sum === 0) {
       ans = [list[left], list[right]];
       break;
@@ -32,11 +32,8 @@ rl.on("line", (ln) => {
     }
     if (sum > 0) {
       right--;
-      continue;
-    }
-    if (sum < 0) {
+    } else {
       left++;
-      continue;
     }
   }
   console.log(ans[0] + " " + ans[1]);
